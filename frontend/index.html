@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter APP</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+        }
+        
+        .container {
+            background: #666;
+            width: 320px;
+            height: 320px;
+            padding: 2rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 0 0 8px #fff, 0 0 0 12px #bbb; /* 입체감, 외곽선 */
+            text-align: center;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #eee;
+            position: relative;
+        }
+        
+        h1 {
+            color: #f0f0f0;
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .counter-display {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1.2rem 0 1.5rem 0;
+            min-height: 80px;
+            background: #f0f0f0;
+            border-radius: 1.5em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 0.5em 1.2em;
+            display: inline-block;
+            width: 100px;           
+            text-align: center;    
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.2rem;
+        }
+        
+        button {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .increment-btn {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .increment-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        
+        .decrement-btn {
+            background: #f44336;
+            color: white;
+        }
+        
+        .decrement-btn:hover {
+            background: #da190b;
+            transform: translateY(-2px);
+        }
+        
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .status {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            min-height: 1.5em; /* 항상 공간 확보 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>카운터 앱</h1>
+        <div class="counter-display" id="counter">0</div>
+        <div class="button-group">
+            <button class="increment-btn" id="incrementBtn">증가 (+)</button>
+            <button class="decrement-btn" id="decrementBtn">감소 (-)</button>
+        </div>
+        <div class="status" id="status"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

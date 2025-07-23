@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS counters (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    count INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 기본 카운터 생성
+INSERT INTO counters (name, count) VALUES ('main_counter', 0) ON CONFLICT (name) DO NOTHING; 
